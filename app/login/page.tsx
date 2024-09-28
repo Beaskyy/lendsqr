@@ -3,10 +3,16 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import { useState } from "react";
+import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
+
+  useEffect(() => {
+    redirect("/")
+  })
+
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 h-screen">
       <div className="bg-[#00000008] p-20 lg:flex flex-col hidden">
