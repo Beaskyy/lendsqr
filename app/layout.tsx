@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import {Work_Sans} from "next/font/google"
+import { Work_Sans } from "next/font/google";
+import { ContextProvider } from "@/contexts/ContextProvider";
 
 const workSans = Work_Sans({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],     
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -20,10 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${workSans.className}`}
-      >
-        {children}
+      <body className={`${workSans.className}`}>
+        <ContextProvider>{children}</ContextProvider>
       </body>
     </html>
   );
