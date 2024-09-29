@@ -24,7 +24,7 @@ const Header = () => {
     <>
       {/* <header
         className={`border-b border-[#06080933] fixed  z-20 w-full bg-white transition-all duration-300 ${
-          activeMenu ? "lg:left-[252px] lg:w-custom" : "lg:left-0"
+          activeMenu ? "lg:left-[283px] lg:w-custom" : "lg:left-0"
         }`}
       >
         <div className="flex justify-between items-center py-[26px]">
@@ -84,7 +84,7 @@ const Header = () => {
           </div>
         </div>
       </header> */}
-      <header className="z-50">
+      <header className="fixed w-full bg-white z-50 h-[100px]">
         <div className="grid grid-cols-2 p-5 shadow-xl">
           <div className="flex justify-between items-center">
             <div>

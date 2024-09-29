@@ -9,8 +9,8 @@ export const links = [
         icon2: "/images/dashboard-2.svg",
       },
       {
-        name: "Content",
-        href: "/content",
+        name: "Users",
+        href: "/users",
         icon: "/images/house.svg",
         icon2: "/images/house-2.svg",
       },

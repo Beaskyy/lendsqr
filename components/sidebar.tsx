@@ -16,31 +16,9 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="hidden lg:flex flex-col justify-between border-r border-[#E1E2E6] min-h-screen h-screen lg:overflow-hidden overflow-auto lg:hover:overflow-auto px-4 z-10 shrink-0 pb-[34px] transition ease-in duration-1000">
+    <div className="pb-[34px]">
       <div className="flex flex-col">
-        <div className="flex justify-between items-center pt-6 pb-10 bg-white">
-          <Link href="/">
-            <Image
-              src="/images/logo.svg"
-              alt="Logo"
-              width={36}
-              height={28}
-              className="cursor-pointer"
-            />
-          </Link>
-          <div>
-            {activeMenu && (
-              <Image
-                src="/images/keyboard_double_arrow_left.svg"
-                alt="Logo"
-                width={24}
-                height={24}
-                className="cursor-pointer"
-                onClick={() => setActiveMenu(!activeMenu)}
-              />
-            )}
-          </div>
-        </div>
+       
         {links?.map(({ main, subMenu }) => (
           <div className="mb-6" key={main}>
             <div>
@@ -82,27 +60,7 @@ const Sidebar = () => {
           </div>
         ))}
       </div>
-      <div className="py-3 px-4 border border-[#E1E2E6] rounded-md flex justify-start items-center gap-2">
-        <div className="size-10 bg-[#FEF3F2] flex shrink-0 justify-center items-center rounded-full">
-          <p className="text-black text-sm font-medium leading-5">N.H</p>
-        </div>
-        <div className="flex justify-between items-center w-full">
-          <div>
-            <h6 className="text-sm font-medium leading-[21px]">Chris</h6>
-            <p className="text-xs text-[#555] font-light leading-[14px]">
-              Nguvu Health LLC
-            </p>
-          </div>
-          <div>
-            <Image
-              src="/images/expand_more.svg"
-              alt="profile"
-              width={20}
-              height={20}
-            />
-          </div>
-        </div>
-      </div>
+    
     </div>
   );
 };
