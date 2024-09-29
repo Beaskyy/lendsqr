@@ -16,7 +16,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="hidden lg:flex flex-col justify-between border-r border-[#E1E2E6] min-h-screen h-screen lg:overflow-hidden overflow-auto lg:hover:overflow-auto px-4 z-50 shrink-0 pb-[34px] transition ease-in duration-1000">
+    <div className="hidden lg:flex flex-col justify-between border-r border-[#E1E2E6] min-h-screen h-screen lg:overflow-hidden overflow-auto lg:hover:overflow-auto px-4 z-10 shrink-0 pb-[34px] transition ease-in duration-1000">
       <div className="flex flex-col">
         <div className="flex justify-between items-center pt-6 pb-10 bg-white">
           <Link href="/">
