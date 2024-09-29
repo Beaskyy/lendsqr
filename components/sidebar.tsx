@@ -16,61 +16,54 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="hidden lg:flex flex-col justify-between border-r border-[#E1E2E6] min-h-screen h-screen lg:overflow-hidden overflow-auto lg:hover:overflow-auto px-4 z-10 shrink-0 pb-[34px] transition ease-in duration-1000">
+    <div className="pb-[34px]">
       <div className="flex flex-col">
-        <div className="flex justify-between items-center pt-6 pb-10 bg-white">
-          <Link href="/">
-            <Image
-              src="/images/logo.svg"
-              alt="Logo"
-              width={36}
-              height={28}
-              className="cursor-pointer"
-            />
-          </Link>
-          <div>
-            {activeMenu && (
-              <Image
-                src="/images/keyboard_double_arrow_left.svg"
-                alt="Logo"
-                width={24}
-                height={24}
-                className="cursor-pointer"
-                onClick={() => setActiveMenu(!activeMenu)}
-              />
-            )}
-          </div>
+        <div className="flex items-center gap-3 mx-6 my-9">
+          <Image src="briefcase.svg" alt="switch" width={16} height={16} />
+          <p className="text-base text-[#213F7D]">Switch Organization</p>
         </div>
+        <div>
+          <Link
+            href="/"
+            className={`h-8 p-5 flex items-center mb-2 cursor-pointer hover:bg-[#39CDCd0f]"
+                  }`}
+          >
+            <p className="flex justify-start items-center gap-2 px-2">
+              {/* <Image src={icon} alt="icon" width={20} height={20} /> */}
+              <span
+                className="text-base font-normal whitespace-nowrap capitalize text-[#213F7D]"
+              >
+                Dashboard
+              </span>
+            </p>
+          </Link>
+        </div>
+
         {links?.map(({ main, subMenu }) => (
-          <div className="mb-6" key={main}>
+          <div className="" key={main}>
             <div>
-              <p className={`text-sm text-[#7A7C7B] font-normal mb-4`}>
+              <p className={`text-xs text-[#545F7D] font-medium uppercase m-6`}>
                 {main}
               </p>
             </div>
-            {subMenu?.map(({ name, icon, icon2, href }) => (
+            {subMenu?.map(({ name, icon, href }) => (
               <div key={name}>
                 <Link
                   href={href}
-                  className={`h-8 pt-1.5 pr-[103px] pb-1.5 flex items-center rounded-lg mb-2 cursor-pointer ${
+                  className={`h-8 p-5 flex items-center mb-2 cursor-pointer ${
                     activeLink === name
-                      ? "bg-[#071A7E0D]"
-                      : "hover:bg-[#071A7E0D]"
+                      ? "bg-[#39cdcd0f] border-l-[3px] border-[#39CDCC]"
+                      : "hover:bg-[#39CDCd0f]"
                   }`}
                   onClick={() => handleClick(name)}
                 >
                   <p className="flex justify-start items-center gap-2 px-2">
-                    <Image
-                      src={activeLink === name ? icon2 : icon}
-                      alt="icon"
-                      width={20}
-                      height={20}
-                    />
+                    <Image src={icon} alt="icon" width={16} height={16} />
                     <span
-                      className={`text-sm font-normal whitespace-nowrap ${
+                      className={`text-base font-normal whitespace-nowrap capitalize ${
                         activeLink === name
-                          ? "text-[#071A7E]"
-                          : "text-[#060809]"
+                          ? "text-[#213F7D]"
+                          : "text-[#213F7D99]"
                       }`}
                     >
                       {name}
@@ -81,27 +74,6 @@ const Sidebar = () => {
             ))}
           </div>
         ))}
-      </div>
-      <div className="py-3 px-4 border border-[#E1E2E6] rounded-md flex justify-start items-center gap-2">
-        <div className="size-10 bg-[#FEF3F2] flex shrink-0 justify-center items-center rounded-full">
-          <p className="text-black text-sm font-medium leading-5">N.H</p>
-        </div>
-        <div className="flex justify-between items-center w-full">
-          <div>
-            <h6 className="text-sm font-medium leading-[21px]">Chris</h6>
-            <p className="text-xs text-[#555] font-light leading-[14px]">
-              Nguvu Health LLC
-            </p>
-          </div>
-          <div>
-            <Image
-              src="/images/expand_more.svg"
-              alt="profile"
-              width={20}
-              height={20}
-            />
-          </div>
-        </div>
       </div>
     </div>
   );
