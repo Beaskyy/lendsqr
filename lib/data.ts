@@ -1,47 +1,56 @@
 export const links = [
   {
-    main: "Main Menu",
+    main: "Customers",
     subMenu: [
       {
-        name: "Dashboard",
-        href: "/",
-        icon: "/images/dashboard.svg",
-        icon2: "/images/dashboard-2.svg",
-      },
-      {
-        name: "Users",
+        name: "users",
         href: "/users",
-        icon: "/images/house.svg",
-        icon2: "/images/house-2.svg",
+        icon: "/user-friends.svg",
       },
       {
-        name: "Announcements",
-        href: "/announcements",
-        icon: "/images/house.svg",
-        icon2: "/images/house-2.svg",
+        name: "guarantors",
+        href: "/guarantors",
+        icon: "/users.svg",
       },
       {
-        name: "Members",
-        href: "/members",
-        icon: "/images/house.svg",
-        icon2: "/images/house-2.svg",
+        name: "loans",
+        href: "/loans",
+        icon: "/sack.png",
       },
       {
-        name: "Billing & Payments",
-        href: "/payments",
-        icon: "/images/house.svg",
-        icon2: "/images/house-2.svg",
+        name: "Decision Models",
+        href: "/decision-models",
+        icon: "/house.svg",
+      },
+      {
+        name: "savings",
+        href: "/savings",
+        icon: "/user-friends.svg",
+      },
+      {
+        name: "Loan Request",
+        href: "/loan-request",
+        icon: "/user-friends.svg",
+      },
+      {
+        name: "whitelist",
+        href: "/whitelist",
+        icon: "/user-friends.svg",
+      },
+      {
+        name: "karma",
+        href: "/karma",
+        icon: "/user-friends.svg",
       },
     ],
   },
   {
-    main: "Organization",
+    main: "Businesses",
     subMenu: [
       {
         name: "Organization Settings",
         href: "/settings",
-        icon: "/images/house.svg",
-        icon2: "/images/house-2.svg",
+        icon: "/house.svg",
       },
     ],
   },
@@ -51,8 +60,7 @@ export const links = [
       {
         name: "Help",
         href: "/help",
-        icon: "/images/house.svg",
-        icon2: "/images/house-2.svg",
+        icon: "/house.svg",
       },
     ],
   },
