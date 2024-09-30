@@ -3,7 +3,7 @@ import Image from "next/image";
 export const Overview = () => {
   return (
     <div className="mt-8">
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-8">
         <div className="bg-white p-8 border border-[#213F7D0F] rounded overview-shadow">
           <Image src="/all-users.svg" alt="all users" width={40} height={40} />
           <h6 className="text-[#545F7D] my-3 text-sm font-medium uppercase">

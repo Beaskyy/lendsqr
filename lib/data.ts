@@ -65,3 +65,43 @@ export const links = [
     ],
   },
 ];
+
+export const members = [
+  {
+    id: 1,
+    organization: "Lendsqr",
+    name: "Adedeji",
+    email: "adedeji@lendsqr.com",
+    phone: "08078903721",
+    created_at: "May 15, 2020 10:00 AM",
+    status: "inactive",
+  },
+  {
+    id: 2,
+    organization: "Irorun",
+    name: "Debby Ogana",
+    email: "debby2@irorun.com",
+    phone: "08160780928",
+    created_at: "Apr 30, 2020 10:00 AM",
+    status: "pending",
+  },
+  {
+    id: 2,
+    organization: "Irorun",
+    name: "Debby Ogana",
+    email: "debby2@irorun.com",
+    phone: "08160780928",
+    created_at: "Apr 30, 2020 10:00 AM",
+    status: "pending",
+  },
+  {
+    id: 2,
+    organization: "Irorun",
+    name: "Debby Ogana",
+    email: "debby2@irorun.com",
+    phone: "08160780928",
+    created_at: "Apr 30, 2020 10:00 AM",
+    status: "pending",
+  },
+ 
+];
