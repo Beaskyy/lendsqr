@@ -5,10 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { links } from "@/lib/data";
+import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
-  const { activeMenu, setActiveMenu, screenSize, setScreenSize } =
-    useStateContext();
+  const pathname = usePathname();
+
   const [activeLink, setActiveLink] = useState("");
 
   const handleClick = (name: string) => {
@@ -29,10 +30,8 @@ const Sidebar = () => {
                   }`}
           >
             <p className="flex justify-start items-center gap-2 px-2">
-              {/* <Image src={icon} alt="icon" width={20} height={20} /> */}
-              <span
-                className="text-base font-normal whitespace-nowrap capitalize text-[#213F7D]"
-              >
+              <Image src="home.svg" alt="icon" width={16} height={16} />
+              <span className="text-base font-normal whitespace-nowrap capitalize text-[#213F7D]">
                 Dashboard
               </span>
             </p>
@@ -51,7 +50,7 @@ const Sidebar = () => {
                 <Link
                   href={href}
                   className={`h-8 p-5 flex items-center mb-2 cursor-pointer ${
-                    activeLink === name
+                    pathname.split("/")[1] === name
                       ? "bg-[#39cdcd0f] border-l-[3px] border-[#39CDCC]"
                       : "hover:bg-[#39CDCd0f]"
                   }`}
@@ -61,7 +60,7 @@ const Sidebar = () => {
                     <Image src={icon} alt="icon" width={16} height={16} />
                     <span
                       className={`text-base font-normal whitespace-nowrap capitalize ${
-                        activeLink === name
+                        pathname?.split("/")[1] === name
                           ? "text-[#213F7D]"
                           : "text-[#213F7D99]"
                       }`}
