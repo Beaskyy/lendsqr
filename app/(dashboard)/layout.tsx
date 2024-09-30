@@ -19,7 +19,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
           <div
             className={`absolute top-[100px] transition-all duration-300 ${
               activeMenu
-                ? "lg:w-custom w-full overflow-hidden lg:left-[283px]"
+                ? "lg:w-[calc(100%-283px)] w-full overflow-hidden lg:left-[283px]"
                 : "w-full lg:left-0"
             }`}
           >

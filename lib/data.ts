@@ -15,32 +15,32 @@ export const links = [
       {
         name: "loans",
         href: "/loans",
-        icon: "/sack.png",
+        icon: "/sack.svg",
       },
       {
         name: "Decision Models",
         href: "/decision-models",
-        icon: "/house.svg",
+        icon: "/handshake.svg",
       },
       {
         name: "savings",
         href: "/savings",
-        icon: "/user-friends.svg",
+        icon: "/piggy-bank.svg",
       },
       {
         name: "Loan Request",
         href: "/loan-request",
-        icon: "/user-friends.svg",
+        icon: "/loan.svg",
       },
       {
         name: "whitelist",
         href: "/whitelist",
-        icon: "/user-friends.svg",
+        icon: "/user-check.svg",
       },
       {
         name: "karma",
         href: "/karma",
-        icon: "/user-friends.svg",
+        icon: "/user-times.svg",
       },
     ],
   },
