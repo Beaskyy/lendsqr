@@ -22,20 +22,16 @@ import {
 } from "@/components/ui/table";
 import { Button } from "./ui/button";
 import { useState } from "react";
-import { Input } from "./ui/input";
-import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
-  searchKey: string;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
-  searchKey,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
@@ -64,7 +60,6 @@ export function DataTable<TData, TValue>({
   return (
     <div className="w-full mb-6">
       <div className="border border-[#213F7D0F] rounded bg-white p-6">
-       
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

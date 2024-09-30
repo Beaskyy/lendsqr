@@ -1,8 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
-import { Dot, ArrowUpDown, MoreHorizontal, ArrowUp } from "lucide-react";
 import { CellAction } from "./cell-action";
 import Image from "next/image";
 

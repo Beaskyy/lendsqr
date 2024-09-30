@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Work_Sans } from "next/font/google";
 import { ContextProvider } from "@/contexts/ContextProvider";

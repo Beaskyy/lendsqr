@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -35,14 +34,14 @@ const Login = () => {
         </p>
         <form>
           <div className="mb-5">
-            <Input
+            <input
               type="email"
               placeholder="Email"
               className="login h-[50px] rounded-[5px] border-2"
             />
           </div>
           <div className="relative mb-5">
-            <Input
+            <input
               type={showPassword ? "password" : "text"}
               placeholder="Password"
               className="login h-[50px] rounded-[5px] border-2"
