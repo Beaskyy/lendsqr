@@ -27,7 +27,7 @@ const Header = () => {
           <div className="relative hidden lg:flex">
             <input
               type="text"
-              className="border border-[#213F7D1A] h-10 w-[400px] placeholder:text-[#545F7D] placeholder:text-sm"
+              className="border border-[#213F7D1A] h-10 w-[400px] placeholder:text-[#545F7D] placeholder:text-sm px-4 pr-16 rounded-md"
               placeholder="Search for anything"
             />
             <Button className="absolute bg-[#39CDCC] h-10 w-14 flex justify-center items-center rounded-r-md top-0 right-0 rounded-l-none">
