@@ -4,6 +4,7 @@ import { Star, UserRound } from "lucide-react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PersonalInfo } from "./personal-info";
+import { Education } from "./education";
 
 export const UserSummary = ({ user }: UserSummaryProps) => {
   return (
@@ -40,7 +41,7 @@ export const UserSummary = ({ user }: UserSummaryProps) => {
         </div>
       </div>
       <Tabs defaultValue="details" className="w-full">
-        <TabsList className="bg-white w-full px-6 pt-12 pb-3.5">
+        <TabsList className="bg-white w-full px-6 pt-12">
           <TabsTrigger value="details">
             General Details
           </TabsTrigger>
@@ -52,6 +53,7 @@ export const UserSummary = ({ user }: UserSummaryProps) => {
         </TabsList>
         <TabsContent value="details" className="bg-white mt-6 p-6 rounde">
           <PersonalInfo user={user} />
+          <Education user={user} />
         </TabsContent>
         <TabsContent value="documents" className="bg-white mt-6 p-6 rounde">
           Change your password here.

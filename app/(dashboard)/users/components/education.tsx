@@ -1,66 +1,58 @@
 import { UserSummaryProps } from "@/types";
 
-export const PersonalInfo = ({ user }: UserSummaryProps) => {
+export const Education = ({ user }: UserSummaryProps) => {
   return (
-    <div className="border-b border-[#213F7D1A] pb-6">
+    <div className="border-b border-[#213F7D1A] py-6">
       <h4 className="text-base text-[#213F7D] font-medium">
-        Personal Information
+        Education and Employment
       </h4>
-      <div className="grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-6 mt-6">
+      <div className="grid md:grid-cols-4 grid-cols-1 gap-6 mt-6">
         <div>
           <h6 className="text-xs text-[#545F7D] uppercase font-normal mb-1">
-            full Name
+            level of education
           </h6>
-          <p className="text-base text-[#545F7D] font-medium">{user?.name}</p>
+          <p className="text-base text-[#545F7D] font-medium">B.Sc</p>
         </div>
         <div>
           <h6 className="text-xs text-[#545F7D] uppercase font-normal mb-1">
-            Phone Number
+            employment status
           </h6>
-          <p className="text-base text-[#545F7D] font-medium">{user?.phone}</p>
+          <p className="text-base text-[#545F7D] font-medium">Employed</p>
         </div>
         <div>
           <h6 className="text-xs text-[#545F7D] uppercase font-normal mb-1">
-            Email Address
+            sector of employment
           </h6>
-          <p className="text-base text-[#545F7D] font-medium">{user?.email}</p>
+          <p className="text-base text-[#545F7D] font-medium">FinTech</p>
         </div>
         <div>
           <h6 className="text-xs text-[#545F7D] uppercase font-normal mb-1">
-            Bvn
+            Duration of employment
           </h6>
-          <p className="text-base text-[#545F7D] font-medium">{user?.phone}</p>
+          <p className="text-base text-[#545F7D] font-medium">2 years</p>
         </div>
         <div>
           <h6 className="text-xs text-[#545F7D] uppercase font-normal mb-1">
-            Gender
+            office email
           </h6>
-          <p className="text-base text-[#545F7D] font-medium capitalize">
-            female
+          <p className="text-base text-[#545F7D] font-medium">
+            {user?.email}
           </p>
         </div>
         <div>
           <h6 className="text-xs text-[#545F7D] uppercase font-normal mb-1">
-            Marital status
+          Monthly income
           </h6>
           <p className="text-base text-[#545F7D] font-medium capitalize">
-            Single
+          ₦200,000.00- ₦400,000.00
           </p>
         </div>
         <div>
           <h6 className="text-xs text-[#545F7D] uppercase font-normal mb-1">
-            Children
+          loan repayment
           </h6>
           <p className="text-base text-[#545F7D] font-medium capitalize">
-            None
-          </p>
-        </div>
-        <div>
-          <h6 className="text-xs text-[#545F7D] uppercase font-normal mb-1">
-            Type of residence
-          </h6>
-          <p className="text-base text-[#545F7D] font-medium capitalize">
-            Parent’s Apartment
+          40,000
           </p>
         </div>
       </div>
