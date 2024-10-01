@@ -1,35 +1,31 @@
-"use client";
 
-import { members } from "@/lib/data";
+
+import { users } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 
-import { useState } from "react";
+const UserId = ({ params }: { params: { userId: string } }) => {
 
-const UserId = ({ params }: { params: { membersId: string } }) => {
-  const [list, setList] = useState(1);
-  const [show, setShow] = useState(true);
-
-  const member = members.find((item) => item.id === parseInt(params.membersId));
+  const user = users.find((item) => item.id === parseInt(params.userId));
 
   return (
-    <main className="mt-6 lg:ml-10 lg:mr-9 mx-4">
+    <main className="mt-14 lg:ml-10 lg:mr-9 mx-4">
       <Link
         href={`/users`}
         className="flex items-center gap-3"
       >
         <Image
-          src="/images/arrow-left.svg"
+          src="/arrow-left.svg"
           alt="arrow-left"
           width={20}
           height={20}
         />
-        <span className="text-base text-[#414141] font-normal leading-[20.3px]">
-          Back
+        <span className="text-base text-[##545F7D] font-normal leading-[18.77px]">
+        Back to Users
         </span>
       </Link>
-      <h2 className="mt-4 text-[#060809] text-[28px] font-semibold leading-[33.6px] mb-6">
-        Profile information
+      <h2 className="mt-4 text-[#213F7D] text-2xl font-medium leading-[28.15px] mb-6">
+      User Details
       </h2>
       <div className="border border-[#D7D7D7] rounded-lg py-5 px-6">
         <div className="flex gap-3 items-center">
@@ -43,13 +39,13 @@ const UserId = ({ params }: { params: { membersId: string } }) => {
           </div>
           <div>
             <h6 className="text-black text-base font-medium tracking-[-0.16px] mb-2">
-              {member?.name}
+              {user?.name}
             </h6>
             <p className="text-xs text-[#797979] font-normal tracking-[-0.12px]">
               UI/UX Designer
             </p>
             <p className="text-xs text-[#797979] font-normal tracking-[-0.12px]">
-              {member?.email}
+              {user?.email}
             </p>
           </div>
         </div>

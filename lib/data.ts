@@ -66,7 +66,7 @@ export const links = [
   },
 ];
 
-export const members = [
+export const users = [
   {
     id: 1,
     organization: "Lendsqr",
