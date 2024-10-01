@@ -92,7 +92,7 @@ export function DataTable<TData, TValue>({
                   {row.getVisibleCells().map((cell) => (
                     <TableCell
                       key={cell.id}
-                      className="text-sm text-[#545F7D] font-normal leading-[20.3px] py-3.5"
+                      className="text-sm text-[#545F7D] font-normal leading-[20.3px] py-3.5 whitespace-nowrap"
                     >
                       {flexRender(
                         cell.column.columnDef.cell,
@@ -116,7 +116,7 @@ export function DataTable<TData, TValue>({
         </Table>
         <div className="flex lg:flex-row flex-col justify-between items-end lg:items-center gap-4 p-6">
           <div className="text-sm text-[#414141] font-semibold">
-            Showing {startItem} to {endItem} of {totalItems} results
+            Showing {endItem} out of {totalItems}
           </div>
           <div className="flex items-center justify-end space-x-2">
             <Button
@@ -124,21 +124,21 @@ export function DataTable<TData, TValue>({
               size="sm"
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
-              className="border border-[#F2F4F7] p-2 bg-white"
+              className="border border-none p-2 bg-[#213F7D1A]"
             >
-              <ChevronLeft className="w-5 h-5 text-black" />
+              <ChevronLeft className="w-4 h-4text-[#213F7D]" />
             </Button>
             {Array.from({ length: table.getPageCount() }, (_, index) => {
               const isActive = table.getState().pagination.pageIndex === index;
               return (
                 <Button
                   key={index}
-                  variant={isActive ? "default" : "outline"}
+                  variant="ghost"
                   size="sm"
                   onClick={() => table.setPageIndex(index)}
-                  className={`rounded-full bg-transparent border-none p-[13px] ${
+                  className={`bg-transparent border-none p-[13px] text-[#545F7D99] text-base font-normal ${
                     table.getState().pagination.pageIndex === index &&
-                    "bg-black text-white"
+                    "text-[#545F7D] bg-transparent border-none font-medium"
                   }`}
                 >
                   {index + 1}
@@ -150,9 +150,9 @@ export function DataTable<TData, TValue>({
               size="sm"
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
-              className="border border-[#F2F4F7] p-2 bg-white"
+              className="border border-none p-2 bg-[#213F7D1A]"
             >
-              <ChevronRight className="w-5 h-5 text-black" />
+              <ChevronRight className="w-4 h-4 text-[#213F7D]" />
             </Button>
           </div>
         </div>

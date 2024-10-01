@@ -21,7 +21,7 @@ export const columns: ColumnDef<AssociationsIdColumn>[] = [
       return (
         <div
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center gap-3 cursor-pointer min-w-32"
         >
           Organization
           <Image
@@ -41,7 +41,7 @@ export const columns: ColumnDef<AssociationsIdColumn>[] = [
       return (
         <div
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center gap-3 cursor-pointer min-w-32"
         >
           Username
           <Image
@@ -61,7 +61,7 @@ export const columns: ColumnDef<AssociationsIdColumn>[] = [
       return (
         <div
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center gap-3 cursor-pointer"
         >
           Email
           <Image
@@ -81,7 +81,7 @@ export const columns: ColumnDef<AssociationsIdColumn>[] = [
       return (
         <div
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center gap-3 cursor-pointer min-w-32"
         >
           phone number
           <Image
@@ -101,7 +101,7 @@ export const columns: ColumnDef<AssociationsIdColumn>[] = [
       return (
         <div
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center gap-3 cursor-pointer"
         >
           JOINED DATE
           <Image
@@ -122,7 +122,7 @@ export const columns: ColumnDef<AssociationsIdColumn>[] = [
       return (
         <div
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center gap-3 cursor-pointer"
         >
           Status
           <Image
@@ -139,27 +139,16 @@ export const columns: ColumnDef<AssociationsIdColumn>[] = [
       const status = info.getValue() as string;
       const statusStyle =
         status === "active"
-          ? { color: "##39CD62", backgroundColor: "#39CD620F" }
+          ? { color: "#39CD62", backgroundColor: "#39CD620F" }
           : status === "inactive"
-          ? { color: "#545F7D", backgroundColor: "#545F7D0F" }
+          ? { color: "#545F7D", backgroundColor: "#545F7D0F" } : status === "blacklisted" ? { color: "#E4033B", backgroundColor: "#E4033B1A"}
           : { color: "#E9B200", backgroundColor: "#E9B2001A" };
 
       return (
         <span
           style={statusStyle}
-          className="flex justify-center items-center gap-2 py-1 pr-4 pl-3 rounded-[20px] text-sm font-medium w-fit"
+          className="flex justify-center items-center gap-2 py-1 pr-4 pl-3 rounded-[20px] text-sm font-normal w-fit capitalize"
         >
-          {status === "completed" ? (
-            <Image src="/images/dot.svg" alt="dot" width={8} height={8} />
-          ) : (
-            <Image
-              src="/images/dot-warning.svg"
-              alt="dot"
-              width={8}
-              height={8}
-            />
-          )}
-
           <span>{status}</span>
         </span>
       );

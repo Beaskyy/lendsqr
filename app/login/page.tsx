@@ -8,9 +8,9 @@ import { useEffect, useState } from "react";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
 
-  useEffect(() => {
-    redirect("/")
-  })
+  // useEffect(() => {
+  //   redirect("/")
+  // })
 
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 h-screen">
@@ -37,14 +37,14 @@ const Login = () => {
             <input
               type="email"
               placeholder="Email"
-              className="login h-[50px] rounded-[5px] border-2"
+              className="login h-[50px] rounded-[5px] border-2 w-full px-4"
             />
           </div>
           <div className="relative mb-5">
             <input
               type={showPassword ? "password" : "text"}
               placeholder="Password"
-              className="login h-[50px] rounded-[5px] border-2"
+              className="login h-[50px] rounded-[5px] border-2 w-full px-4"
             />
             <span
               onClick={() => setShowPassword(!showPassword)}

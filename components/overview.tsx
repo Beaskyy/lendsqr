@@ -30,7 +30,7 @@ export const Overview = () => {
           <h6 className="text-[#545F7D] my-3 text-sm font-medium uppercase">
             Users with Savings
           </h6>
-          <h4 className="text-[#213F7D] text-2xl font-semibold">2,453</h4>
+          <h4 className="text-[#213F7D] text-2xl font-semibold">102,453</h4>
         </div>
       </div>
     </div>
