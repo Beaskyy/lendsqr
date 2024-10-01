@@ -54,7 +54,7 @@ export function DataTable<TData, TValue>({
   const pageSize = table.getState().pagination.pageSize;
   const pageIndex = table.getState().pagination.pageIndex;
   const totalItems = table.getFilteredRowModel().rows.length;
-  const startItem = pageIndex * pageSize + 1;
+  // const startItem = pageIndex * pageSize + 1;
   const endItem = Math.min((pageIndex + 1) * pageSize, totalItems);
 
   return (
@@ -129,7 +129,7 @@ export function DataTable<TData, TValue>({
               <ChevronLeft className="w-4 h-4text-[#213F7D]" />
             </Button>
             {Array.from({ length: table.getPageCount() }, (_, index) => {
-              const isActive = table.getState().pagination.pageIndex === index;
+              // const isActive = table.getState().pagination.pageIndex === index;
               return (
                 <Button
                   key={index}

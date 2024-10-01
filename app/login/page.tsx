@@ -2,15 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { redirect } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
-
-  // useEffect(() => {
-  //   redirect("/")
-  // })
 
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 h-screen">
@@ -25,7 +20,13 @@ const Login = () => {
         />
       </div>
       <div className="flex flex-col justify-center h-screen lg:px-32 md:px-10 px-5">
-      <Image src="/logo.svg" alt="logo" width={174} height={36} className="mb-40 lg:hidden" />
+        <Image
+          src="/logo.svg"
+          alt="logo"
+          width={174}
+          height={36}
+          className="mb-40 lg:hidden"
+        />
         <h1 className="text-[#213F7D] font-bold text-[40px] leading-[54.64px] tracking-[-4%] mb-4">
           Welcome!
         </h1>
