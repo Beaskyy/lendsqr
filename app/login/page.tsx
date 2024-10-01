@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -9,9 +8,9 @@ import { useEffect, useState } from "react";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
 
-  useEffect(() => {
-    redirect("/")
-  })
+  // useEffect(() => {
+  //   redirect("/")
+  // })
 
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 h-screen">
@@ -35,17 +34,17 @@ const Login = () => {
         </p>
         <form>
           <div className="mb-5">
-            <Input
+            <input
               type="email"
               placeholder="Email"
-              className="login h-[50px] rounded-[5px] border-2"
+              className="login h-[50px] rounded-[5px] border-2 w-full px-4"
             />
           </div>
           <div className="relative mb-5">
-            <Input
+            <input
               type={showPassword ? "password" : "text"}
               placeholder="Password"
-              className="login h-[50px] rounded-[5px] border-2"
+              className="login h-[50px] rounded-[5px] border-2 w-full px-4"
             />
             <span
               onClick={() => setShowPassword(!showPassword)}

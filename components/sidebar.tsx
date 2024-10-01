@@ -1,20 +1,12 @@
 "use client";
 
-import { useStateContext } from "@/contexts/ContextProvider";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
 import { links } from "@/lib/data";
 import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
   const pathname = usePathname();
-
-  const [activeLink, setActiveLink] = useState("");
-
-  const handleClick = (name: string) => {
-    setActiveLink(name);
-  };
 
   return (
     <div className="pb-[34px]">
@@ -54,7 +46,6 @@ const Sidebar = () => {
                       ? "bg-[#39cdcd0f] border-l-[3px] border-[#39CDCC]"
                       : "hover:bg-[#39CDCd0f]"
                   }`}
-                  onClick={() => handleClick(name)}
                 >
                   <p className="flex justify-start items-center gap-2 px-2">
                     <Image src={icon} alt="icon" width={16} height={16} />

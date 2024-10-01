@@ -13,7 +13,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       <Header />
       <div className="relative">
         <div className="flex items-center">
-          <div className="fixed top-[100px] h-screen bg-white w-[283px] overflow-y-auto overflow-hidden hover:overflow-auto">
+          <div className="hidden lg:block fixed top-[100px] h-screen bg-white w-[283px] overflow-y-auto overflow-hidden hover:overflow-auto">
             <Sidebar />
           </div>
           <div

@@ -12,7 +12,6 @@ const UsersPage = () => {
       <DataTable
         columns={columns}
         data={members}
-        searchKey="name"
       />
     </main>
   );
