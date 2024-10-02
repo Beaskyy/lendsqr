@@ -2,10 +2,17 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const Login = () => {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(true);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push("/");
+  };
 
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 h-screen">
@@ -33,12 +40,13 @@ const Login = () => {
         <p className="login text-xl leading-[27.32px] mb-16">
           Enter details to login.
         </p>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-5">
             <input
               type="email"
               placeholder="Email"
               className="login h-[50px] rounded-[5px] border-2 w-full px-4"
+              required
             />
           </div>
           <div className="relative mb-5">
@@ -46,6 +54,7 @@ const Login = () => {
               type={showPassword ? "password" : "text"}
               placeholder="Password"
               className="login h-[50px] rounded-[5px] border-2 w-full px-4"
+              required
             />
             <span
               onClick={() => setShowPassword(!showPassword)}
