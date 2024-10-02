@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PersonalInfo } from "./personal-info";
 import { Education } from "./education";
 import { Socials } from "./socials";
+import { Guarantor } from "./guarantor";
 
 export const UserSummary = ({ user }: UserSummaryProps) => {
   return (
@@ -43,9 +44,7 @@ export const UserSummary = ({ user }: UserSummaryProps) => {
       </div>
       <Tabs defaultValue="details" className="w-full">
         <TabsList className="bg-white w-full px-6 pt-12">
-          <TabsTrigger value="details">
-            General Details
-          </TabsTrigger>
+          <TabsTrigger value="details">General Details</TabsTrigger>
           <TabsTrigger value="documents">Documents</TabsTrigger>
           <TabsTrigger value="bank">Bank Details</TabsTrigger>
           <TabsTrigger value="loans">Loans</TabsTrigger>
@@ -56,6 +55,7 @@ export const UserSummary = ({ user }: UserSummaryProps) => {
           <PersonalInfo user={user} />
           <Education user={user} />
           <Socials user={user} />
+          <Guarantor user={user} />
         </TabsContent>
         <TabsContent value="documents" className="bg-white mt-6 p-6 rounde">
           Change your password here.
