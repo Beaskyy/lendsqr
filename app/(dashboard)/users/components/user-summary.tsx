@@ -58,19 +58,19 @@ export const UserSummary = ({ user }: UserSummaryProps) => {
           <Guarantor user={user} />
         </TabsContent>
         <TabsContent value="documents" className="bg-white mt-6 p-6 rounde">
-          Change your password here.
+          Documents here.
         </TabsContent>
         <TabsContent value="bank" className="bg-white mt-6 p-6 rounde">
-          Change your password here.
+          Bank details here.
         </TabsContent>
         <TabsContent value="loans" className="bg-white mt-6 p-6 rounde">
-          Change your password here.
+          Loan details here.
         </TabsContent>
         <TabsContent value="savings" className="bg-white mt-6 p-6 rounde">
-          Change your password here.
+          Savings here.
         </TabsContent>
         <TabsContent value="app" className="bg-white mt-6 p-6 rounde">
-          Change your password here.
+          App and system.
         </TabsContent>
       </Tabs>
     </>
