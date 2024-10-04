@@ -9,7 +9,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="pb-[34px]">
+    <div className="pb-28">
       <div className="flex flex-col">
         <div className="flex items-center gap-3 mx-6 my-9">
           <Image src="briefcase.svg" alt="switch" width={16} height={16} />
@@ -31,7 +31,7 @@ const Sidebar = () => {
         </div>
 
         {links?.map(({ main, subMenu }) => (
-          <div className="" key={main}>
+          <div key={main}>
             <div>
               <p className={`text-xs text-[#545F7D] font-medium uppercase m-6`}>
                 {main}

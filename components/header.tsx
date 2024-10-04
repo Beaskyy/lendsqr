@@ -21,9 +21,9 @@ const Header = () => {
     <header className="fixed w-full bg-white z-50">
       <div className="grid grid-cols-2 p-5 shadow-md shadow-[#0000000A] h-[100px]">
         <div className="flex justify-between items-center">
-          <div>
+          <Link href="/">
             <Image src="/logo.svg" alt="logo" width={145} height={30} />
-          </div>
+          </Link>
           <div className="relative hidden lg:flex">
             <input
               type="text"
@@ -65,10 +65,11 @@ const Header = () => {
               <DropdownMenuContent>
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Billing</DropdownMenuItem>
-                <DropdownMenuItem>Team</DropdownMenuItem>
-                <DropdownMenuItem>Subscription</DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/login" className="text-base text-[#213F7D]">
+                    Logout
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

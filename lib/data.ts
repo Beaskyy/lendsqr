@@ -19,7 +19,7 @@ export const links = [
       },
       {
         name: "Decision Models",
-        href: "/decision-models",
+        href: "/",
         icon: "/handshake.svg",
       },
       {
@@ -29,17 +29,17 @@ export const links = [
       },
       {
         name: "Loan Request",
-        href: "/loan-request",
+        href: "/",
         icon: "/loan.svg",
       },
       {
         name: "whitelist",
-        href: "/whitelist",
+        href: "/",
         icon: "/user-check.svg",
       },
       {
         name: "karma",
-        href: "/karma",
+        href: "/",
         icon: "/user-times.svg",
       },
     ],
@@ -48,19 +48,69 @@ export const links = [
     main: "Businesses",
     subMenu: [
       {
-        name: "Organization Settings",
-        href: "/settings",
-        icon: "/house.svg",
+        name: "Organization",
+        href: "/",
+        icon: "/briefcase.svg",
+      },
+      {
+        name: "Loan Products",
+        href: "/",
+        icon: "/loan.svg",
+      },
+      {
+        name: "Savings Products",
+        href: "/",
+        icon: "/savings-product.svg",
+      },
+      {
+        name: "Fees and Charges",
+        href: "/",
+        icon: "/coins-solid.svg",
+      },
+      {
+        name: "Transactions",
+        href: "/",
+        icon: "/transactions.svg",
+      },
+      {
+        name: "Services",
+        href: "/",
+        icon: "/services.svg",
+      },
+      {
+        name: "Service Account",
+        href: "/",
+        icon: "/user-cog.svg",
+      },
+      {
+        name: "Settlements",
+        href: "/",
+        icon: "/scroll.svg",
+      },
+      {
+        name: "Reports",
+        href: "/",
+        icon: "/chart-bar.svg",
       },
     ],
   },
   {
-    main: "Support",
+    main: "Settings",
     subMenu: [
       {
-        name: "Help",
-        href: "/help",
-        icon: "/house.svg",
+        name: "Preferences",
+        href: "/",
+        icon: "/sliders-h.svg",
+      },
+      {
+        name: "Fees and Pricing",
+        href: "/",
+        icon: "/badge-percent.svg",
+      },
+      {
+        name: "Audit Logs",
+        href: "/",
+        icon: "/clipboard-list.svg",
       },
     ],
   },
